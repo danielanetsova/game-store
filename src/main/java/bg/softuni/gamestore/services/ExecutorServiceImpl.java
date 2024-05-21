@@ -192,7 +192,6 @@ public class ExecutorServiceImpl implements ExecutorService {
     }
 
     private String registerUser(String input) {
-        //тук нз дали да връща стринг че юзърът е регистриран или да овъррайдна toString метода
         String[] args = input.split("\\|");
         String email = args[1];
         String password = args[2];
