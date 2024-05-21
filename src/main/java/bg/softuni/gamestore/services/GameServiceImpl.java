@@ -73,8 +73,6 @@ public class GameServiceImpl implements GameService {
 
     @Override
     public DetailGameDTO getGamesDetailsByName(String title) {
-        //Мойе да направим метода findByTitle(title) да връща направо Set<DetailGameDTO> като
-        //напишем query-то на ръка
         Optional<Game> byTitle = gameRepository.findByTitle(title);
 
         if (byTitle.isEmpty()) {
