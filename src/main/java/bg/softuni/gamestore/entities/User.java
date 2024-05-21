@@ -23,8 +23,6 @@ public class User {
     @Column(unique = true)
     private String email;
 
-    //може да си направим custom анотация за password, но може и просто да си добавим @Pattern с regex
-    //@Pattern(regexp = "(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{6,}")
     @Password
     @NotNull(message = "Required field Password!")
     private String password;
