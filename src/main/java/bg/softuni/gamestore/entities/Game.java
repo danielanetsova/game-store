@@ -18,7 +18,7 @@ public class Game {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-//    title, trailer (YouTube Video Id), image thumbnail (URL), size, price, description and release
+
     @NotNull
     @Pattern(regexp = "[A-Z].{2,99}", message = "Title has to begin with an uppercase letter and must " +
             "have length between 3 and 100 symbols (inclusively).")
@@ -129,7 +129,13 @@ public class Game {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Game game = (Game) o;
-        return Objects.equals(id, game.id) && Objects.equals(title, game.title) && Objects.equals(trailer, game.trailer) && Objects.equals(imageThumbnail, game.imageThumbnail) && Objects.equals(size, game.size) && Objects.equals(price, game.price) && Objects.equals(description, game.description) && Objects.equals(releaseDate, game.releaseDate);
+        return Objects.equals(id, game.id) 
+            && Objects.equals(title, game.title) 
+            && Objects.equals(trailer, game.trailer) 
+            && Objects.equals(imageThumbnail, game.imageThumbnail) 
+            && Objects.equals(size, game.size) && Objects.equals(price, game.price) 
+            && Objects.equals(description, game.description) 
+            && Objects.equals(releaseDate, game.releaseDate);
     }
 
     @Override
